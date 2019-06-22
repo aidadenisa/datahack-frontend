@@ -1,0 +1,8 @@
+<button mat-raised-button [color]="color || 'primary'" (click)="clicked($event)">
+    <div class="">
+        <span *ngIf="!isLoading">{{displayText}}</span>
+        <span *ngIf="isLoading" class="align-items-center d-flex">&nbsp;&nbsp;
+            <mat-spinner diameter="20"></mat-spinner>&nbsp;
+        </span>
+    </div>
+</button>
