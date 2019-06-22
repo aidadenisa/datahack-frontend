@@ -1,6 +1,11 @@
 <ngx-loading-bar [color]="'#ffdf40'"></ngx-loading-bar>
 
-<div class="d-flex">
+<div class="d-flex"
+     (swiperight)="onSwipeRight()"
+     (swipeleft)="onSwipeLeft()">
+
+    <div class="white-menu position-fixed d-lg-none" [hidden]="!showSideMenu"></div>
+    <app-side-menu></app-side-menu>
 
     <div class="grid-container">
         <div></div>
@@ -12,5 +17,6 @@
             </div>
         </div>
     </div>
+
 
 </div>

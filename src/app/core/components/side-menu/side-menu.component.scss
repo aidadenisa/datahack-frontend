@@ -1,0 +1,87 @@
+//@import "styles.scss";
+
+:host {
+    z-index: 10;
+
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30vh;
+
+    width: 300px;
+    height: 100vh;
+
+    background: #00092d;
+    position: fixed;
+
+    transition: left .5s;
+    left: 0;
+
+    .collapse-button-wrapper {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        transition: left .5s, right .5s, color .5s;
+
+        > * {
+            cursor: pointer;
+        }
+
+        $size-2: 45px;
+
+        ::ng-deep mat-icon {
+            font-size: $size-2;
+            height: $size-2;
+            width: $size-2;
+            line-height: $size-2;
+        }
+    }
+}
+
+.side-menu.collapsed {
+    left: -300px;
+    .collapse-button-wrapper {
+        left: auto;
+        right: -50px;
+        color: black;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    :host {
+        width: 300px;
+        min-width: 300px;
+    }
+
+    .side-menu.collapsed {
+        left: -235px;
+
+        .collapse-button-wrapper {
+            right: 20px;
+            color: white;
+        }
+    }
+}
+
+
+.active {
+    color: #ffdf40 !important;
+    border-left: 8px solid #ffdf40 !important;
+}
+
+.header {
+    color: #ffdf40;
+    margin-bottom: 20px;
+    padding: .5rem 1rem;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1.2rem;
+    border-left: 8px solid transparent;
+}
+
