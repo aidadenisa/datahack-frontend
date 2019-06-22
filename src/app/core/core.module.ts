@@ -1,8 +1,8 @@
-import {NgModule, Optional, SkipSelf} from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import {SharedModule} from '../shared/shared.module';
-import {CoreRoutingModule} from './core-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { CoreRoutingModule } from './core-routing.module';
 
 @NgModule({
     declarations: [HomePageComponent],
@@ -10,7 +10,7 @@ import {CoreRoutingModule} from './core-routing.module';
         CommonModule,
         SharedModule,
         CoreRoutingModule,
-    ]
+    ],
 })
 export class CoreModule {
     /* make sure CoreModule is imported only by one NgModule the AppModule */

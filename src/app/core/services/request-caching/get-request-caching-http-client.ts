@@ -36,12 +36,12 @@ export class GetRequestCachingHttpClient {
         }
 
         const observers: Observer<any>[] = [];
-        const observable = Observable.create(observer => {
+        const observable = new Observable(observer => {
             observers.push(observer);
         });
 
         const requestObs = this.http.get<T>(url, options).pipe(map((response: any) => {
-            return <T>response;
+            return <T> response;
         })).pipe(tap((data) => {
             this.cache.put(cacheKey, data);
             for (const observer of observers) {

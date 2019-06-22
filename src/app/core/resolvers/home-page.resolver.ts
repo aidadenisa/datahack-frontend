@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
-import {Observable} from "rxjs";
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class HomePageResolver implements Resolve<any> {
@@ -8,7 +8,7 @@ export class HomePageResolver implements Resolve<any> {
 
     }
 
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
+    public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
         return true;
     }
 

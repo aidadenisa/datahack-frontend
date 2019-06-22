@@ -3,7 +3,7 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } fr
 import { Observable, Observer, of } from 'rxjs';
 
 import { tap } from 'rxjs/internal/operators';
-import {HttpResponseCache} from './http-response-cache';
+import { HttpResponseCache } from './http-response-cache';
 
 @Injectable({
     providedIn: 'root',
@@ -37,7 +37,7 @@ export class CachingInterceptor implements HttpInterceptor {
         }
 
         const observers: Observer<any>[] = [];
-        const observable = Observable.create(observer => {
+        const observable = new Observable(observer => {
             observers.push(observer);
         });
 

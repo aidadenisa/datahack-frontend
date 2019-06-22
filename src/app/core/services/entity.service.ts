@@ -1,10 +1,10 @@
 import { Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import {Entity} from '../models/entity.model';
-import {ConstantsService} from './constants.service';
-import {AuthService} from '../auth/auth.service';
-import {GetRequestCachingHttpClient} from './request-caching/get-request-caching-http-client';
+import { Entity } from '../models/entity.model';
+import { ConstantsService } from './constants.service';
+import { AuthService } from '../auth/auth.service';
+import { GetRequestCachingHttpClient } from './request-caching/get-request-caching-http-client';
 
 export abstract class EntityService<T extends Entity> {
     public abstract entityName: string;

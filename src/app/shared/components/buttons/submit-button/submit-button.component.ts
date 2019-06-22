@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {SnackMessageService} from '../../../services/snack-message.service';
+import { SnackMessageService } from '../../../services/snack-message.service';
 
 @Component({
     selector: 'shared-submit-button',
