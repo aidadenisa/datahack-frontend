@@ -8,6 +8,11 @@ import {environment} from '../environments/environment';
 import {LoadingBarHttpClientModule} from '@ngx-loading-bar/http-client';
 import {CoreModule} from './core/core.module';
 import {SharedModule} from './shared/shared.module';
+import {MatIconModule} from '@angular/material';
+
+const matImports = [
+    MatIconModule,
+];
 
 @NgModule({
     declarations: [
@@ -20,6 +25,7 @@ import {SharedModule} from './shared/shared.module';
         CoreModule,
         SharedModule.forRoot(),
         LoadingBarHttpClientModule,
+        ...matImports,
     ],
     providers: [],
     bootstrap: [AppComponent]
