@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HomePageComponent} from './pages/home-page/home-page.component';
 import {HomePageResolver} from './resolvers/home-page.resolver';
+import {AuthGuard} from './auth/guards/auth.guard';
+import {RoleGuard} from './auth/guards/role.guard';
 
 const routes: Routes = [
     {
@@ -9,7 +11,12 @@ const routes: Routes = [
         resolve: {
             data: HomePageResolver,
         },
-        runGuardsAndResolvers: 'always',
+    },
+    {
+        path: 'manager',
+        loadChildren: '../features/manager/manager.module#ManagerModule',
+        canActivate: [AuthGuard, RoleGuard],
+        data: {authenticated: true, requiredRole: 'Manager'},
     },
     {path: '**', redirectTo: ''},
 ];
