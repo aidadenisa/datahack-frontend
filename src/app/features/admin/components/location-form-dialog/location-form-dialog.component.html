@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Add new location</h1>
+<div mat-dialog-content>
+    <form class="" [formGroup]="form">
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Name" formControlName="name" autocomplete="off" class="">
+            <mat-error *ngIf="form.controls['name'].hasError('required')">
+                Location name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-between">
+    <button mat-raised-button (click)="dialogRef.close()">Cancel</button>
+    <button mat-raised-button (click)="save()" cdkFocusInitial color="primary">Save</button>
+</div>
