@@ -3,5 +3,9 @@ import { LocationModel } from './location-model';
 
 export interface RoomModel extends Entity {
     name: string;
-    location?: LocationModel;
+    location: LocationModel;
+    capacity: number;
+    area: number;
+    soundSystem: boolean;
+    seats: boolean;
 }

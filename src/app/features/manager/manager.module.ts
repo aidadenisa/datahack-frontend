@@ -4,15 +4,36 @@ import { ManagerPageComponent } from './pages/manager-page/manager-page.componen
 import { ManagerRoutingModule } from './manager-routing.module';
 import { RoomListComponent } from './components/room-list/room-list.component';
 import { RoomComponent } from './components/room/room.component';
-import { MatCardModule, MatListModule } from '@angular/material';
+import {
+  MatCardModule,
+  MatDialog,
+  MatDialogConfig,
+  MatFormFieldModule,
+  MatListModule,
+  MatDialogContent,
+  MatSelect,
+  MatOption, MatInput, MatDialogActions, MatDialogModule, MatSelectModule, MatInputModule, MatOptionModule, MatCheckboxModule
+} from '@angular/material';
+import { EditRoomDialogComponent } from './components/edit-room-dialog/edit-room-dialog.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
-    declarations: [ManagerPageComponent, RoomListComponent, RoomComponent],
+    declarations: [ManagerPageComponent, RoomListComponent, RoomComponent, EditRoomDialogComponent],
     imports: [
         CommonModule,
         ManagerRoutingModule,
         MatListModule,
         MatCardModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        MatSelectModule,
+        MatInputModule,
+        MatOptionModule,
+        FormsModule,
+        MatCheckboxModule,
+    ],
+    entryComponents: [
+      EditRoomDialogComponent,
     ],
 })
 export class ManagerModule {

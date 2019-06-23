@@ -1,0 +1,42 @@
+<h3 mat-dialog-title>{{dialogTitle}}</h3>
+
+<mat-dialog-content>
+
+  <mat-form-field>
+    <input matInput
+           placeholder="Name"
+            [(ngModel)]="data.name">
+  </mat-form-field>
+
+  <mat-select>
+    <mat-option *ngFor="let location of locationNames" [value]="location">
+      {{location}}
+    </mat-option>
+  </mat-select>
+
+  <mat-form-field>
+    <input matInput
+           placeholder="How many people does it fit?"
+           [(ngModel)]="data.capacity">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput
+           placeholder="How big is the room (mp)?"
+           [(ngModel)]="data.area">
+  </mat-form-field>
+
+  <mat-checkbox [(ngModel)]="data.soundSystem">
+    Does it have sound system?
+  </mat-checkbox>
+
+  <mat-checkbox [(ngModel)]="data.seats">
+    Does it have seats?
+  </mat-checkbox>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">Close</button>
+  <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>
