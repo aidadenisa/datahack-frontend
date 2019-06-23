@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {LocationModel} from '../../../../shared/models/location-model';
 
 @Component({
   selector: 'app-edit-room-dialog',
@@ -10,7 +11,14 @@ export class EditRoomDialogComponent implements OnInit {
 
   public dialogTitle: string;
 
-  public locationNames;
+  public locations: LocationModel[] = [{
+    name: 'FITT',
+    rooms: [],
+  },
+    {
+      name: 'UPT',
+      rooms: [],
+    }];
 
   constructor(
     private dialogRef: MatDialogRef<EditRoomDialogComponent>,
@@ -20,16 +28,14 @@ export class EditRoomDialogComponent implements OnInit {
 
   ngOnInit() {
 
-    this.locationNames = () => {
-      const names: string[] = ['Aa', 'Bb'];
-      // if (this.data && this.data.locations && this.data.locations.length) {
-      //   this.data.location.forEach( (location) => {
-      //     names.push(location.name);
-      //   });
-      // }
-      return names;
-    };
+  }
 
+  public save() {
+    this.dialogRef.close(this.data);
+  }
+
+  public close() {
+    this.dialogRef.close();
   }
 
 

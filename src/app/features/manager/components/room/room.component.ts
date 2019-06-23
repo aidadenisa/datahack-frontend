@@ -25,14 +25,14 @@ export class RoomComponent implements OnInit {
 
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditRoomDialogComponent, {
-      width: '250px',
+      // width: '250px',
       data: {
         name: this.room.name,
         location : this.room.location ? this.room.location : '',
         capacity : this.room.capacity ? this.room.capacity : 0,
-        area : this.room.area ? this.room.area : '',
-        soundSystem : this.room.soundSystem ? this.room.soundSystem : '',
-        seats : this.room.seats ? this.room.seats : '',
+        area : this.room.area ? this.room.area : 0,
+        soundSystem : this.room.soundSystem ? this.room.soundSystem : false,
+        seats : this.room.seats ? this.room.seats : false,
       },
     });
 

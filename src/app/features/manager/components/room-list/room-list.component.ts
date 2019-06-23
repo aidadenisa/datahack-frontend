@@ -8,7 +8,22 @@ import { RoomModel } from '../../../../shared/models/room-model';
 })
 export class RoomListComponent implements OnInit {
 
-    public rooms: RoomModel[] = [];
+    public rooms: RoomModel[] = [{
+      name: 'Galeria de arta',
+      location: {name: 'FITT'},
+      capacity: 80,
+      area: 100,
+      soundSystem: true,
+      seats: true,
+    },
+      {
+        name: 'Sala de sedinte parter',
+        location: {name: 'FITT'},
+        capacity: 10,
+        area: 12,
+        soundSystem: false,
+        seats: true,
+      }];
 
     constructor() {
     }

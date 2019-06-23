@@ -12,7 +12,15 @@ import {
   MatListModule,
   MatDialogContent,
   MatSelect,
-  MatOption, MatInput, MatDialogActions, MatDialogModule, MatSelectModule, MatInputModule, MatOptionModule, MatCheckboxModule
+  MatOption,
+  MatInput,
+  MatDialogActions,
+  MatDialogModule,
+  MatSelectModule,
+  MatInputModule,
+  MatOptionModule,
+  MatCheckboxModule,
+  MatButtonModule
 } from '@angular/material';
 import { EditRoomDialogComponent } from './components/edit-room-dialog/edit-room-dialog.component';
 import {FormsModule} from '@angular/forms';
@@ -31,6 +39,7 @@ import {FormsModule} from '@angular/forms';
         MatOptionModule,
         FormsModule,
         MatCheckboxModule,
+        MatButtonModule
     ],
     entryComponents: [
       EditRoomDialogComponent,
