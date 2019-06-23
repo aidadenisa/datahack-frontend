@@ -47,6 +47,11 @@ export class SideMenuComponent implements OnInit {
             //     activated: 'active',
             // },
             {
+                title: 'Booking',
+                routerLink: ['/booking'],
+                activated: 'active',
+            },
+            {
                 title: 'Manager',
                 routerLink: ['/manager'],
                 activated: 'active',

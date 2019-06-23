@@ -4,6 +4,7 @@ import { SubmitButtonComponent } from './components/buttons/submit-button/submit
 import { SnackMessageService } from './services/snack-message.service';
 import { MatButtonModule, MatProgressSpinnerModule, MatSnackBarModule } from '@angular/material';
 import { StorageModule } from '@ngx-pwa/local-storage';
+import { RoomService } from './services/room.service';
 
 const matImports = [
     MatSnackBarModule,

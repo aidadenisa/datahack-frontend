@@ -9,6 +9,7 @@ import { MatIconRegistry } from '@angular/material';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
     @ViewChild(SideMenuComponent, {static: true})
     private sideMenu: SideMenuComponent;
 

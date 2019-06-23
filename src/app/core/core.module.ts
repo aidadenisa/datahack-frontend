@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CoreRoutingModule } from './core-routing.module';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { MatIconModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 const matImports = [
     MatIconModule,
@@ -19,6 +20,7 @@ const matImports = [
         CommonModule,
         SharedModule,
         CoreRoutingModule,
+        HttpClientModule,
         ...matImports,
     ],
     exports: [

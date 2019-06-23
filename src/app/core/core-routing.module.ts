@@ -24,6 +24,10 @@ const routes: Routes = [
         canActivate: [AuthGuard, RoleGuard],
         data: {authenticated: true, requiredRole: 'Manager'},
     },
+    {
+        path: 'booking',
+        loadChildren: '../features/booking/booking.module#BookingModule',
+    },
     {path: '**', redirectTo: ''},
 ];
 
