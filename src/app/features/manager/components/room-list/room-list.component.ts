@@ -8,7 +8,7 @@ import { RoomModel } from '../../../../shared/models/room-model';
 })
 export class RoomListComponent implements OnInit {
 
-    public rooms: RoomModel[] = [{name: 'Bla bla'}, {name: 'Bla'}];
+    public rooms: RoomModel[] = [];
 
     constructor() {
     }

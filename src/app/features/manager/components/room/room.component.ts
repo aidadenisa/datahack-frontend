@@ -30,8 +30,9 @@ export class RoomComponent implements OnInit {
         name: this.room.name,
         location : this.room.location ? this.room.location : '',
         capacity : this.room.capacity ? this.room.capacity : 0,
-        statHour : this.room.startHour ? this.room.startHour : '',
-        endHour : this.room.endHour ? this.room.endHour : '',
+        area : this.room.area ? this.room.area : '',
+        soundSystem : this.room.soundSystem ? this.room.soundSystem : '',
+        seats : this.room.seats ? this.room.seats : '',
       },
     });
 
