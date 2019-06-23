@@ -27,11 +27,11 @@ export class RoomListComponent implements OnInit {
   //           seats: true,
   //       }];
 
-    constructor(private roomService: RoomService) {
-    }
+  constructor(private roomService: RoomService) {
+  }
 
-    public async ngOnInit() {
-      this.rooms = await this.roomService.getAll().toPromise();
-    }
+  public async ngOnInit() {
+    this.rooms = await this.roomService.getAll().toPromise();
+  }
 
 }

@@ -5,14 +5,18 @@
   <mat-form-field class="col-12">
     <input matInput
            placeholder="Name"
-            [(ngModel)]="data.name">
+           [(ngModel)]="data.name">
   </mat-form-field>
 
-  <mat-select class="col-12" [(value)]="data.location">
-    <mat-option *ngFor="let location of locations" [value]="location.name">
-      {{location.name}}
-    </mat-option>
-  </mat-select>
+  <mat-form-field class="col-12">
+    <mat-label>Location</mat-label>
+    <mat-select class="col-12" [(value)]="data.location">
+      <mat-option *ngFor="let location of locations" [value]="location.name">
+        {{location.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
 
   <mat-form-field class="col-12">
     <input matInput
