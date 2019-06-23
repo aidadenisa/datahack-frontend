@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SubmitButtonComponent } from './components/buttons/submit-button/submit-button.component';
 import { SnackMessageService } from './services/snack-message.service';
 import { MatButtonModule, MatProgressSpinnerModule, MatSnackBarModule } from '@angular/material';
+import { StorageModule } from '@ngx-pwa/local-storage';
 
 const matImports = [
     MatSnackBarModule,
@@ -20,6 +21,7 @@ const exportableComponents = [
     ],
     imports: [
         CommonModule,
+        StorageModule,
         ...matImports,
     ],
     exports: [

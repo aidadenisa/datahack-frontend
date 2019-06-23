@@ -41,11 +41,11 @@ export class SideMenuComponent implements OnInit {
     private async populateMenu(loggedIn: boolean) {
         // this.menuItems = await this.menuItemsService.get(loggedIn);
         this.menuItems = [
-            {
-                title: 'Admin',
-                routerLink: ['/admin'],
-                activated: 'active',
-            },
+            // {
+            //     title: 'Admin',
+            //     routerLink: ['/admin'],
+            //     activated: 'active',
+            // },
             {
                 title: 'Manager',
                 routerLink: ['/manager'],
