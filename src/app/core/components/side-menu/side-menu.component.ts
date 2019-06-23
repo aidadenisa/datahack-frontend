@@ -42,6 +42,11 @@ export class SideMenuComponent implements OnInit {
         // this.menuItems = await this.menuItemsService.get(loggedIn);
         this.menuItems = [
             {
+                title: 'Admin',
+                routerLink: ['/admin'],
+                activated: 'active',
+            },
+            {
                 title: 'Manager',
                 routerLink: ['/manager'],
                 activated: 'active',

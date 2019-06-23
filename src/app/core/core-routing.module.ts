@@ -13,6 +13,12 @@ const routes: Routes = [
         },
     },
     {
+        path: 'admin',
+        loadChildren: '../features/admin/admin.module#AdminModule',
+        canActivate: [AuthGuard, RoleGuard],
+        data: {authenticated: true, requiredRole: 'Admin'},
+    },
+    {
         path: 'manager',
         loadChildren: '../features/manager/manager.module#ManagerModule',
         canActivate: [AuthGuard, RoleGuard],
