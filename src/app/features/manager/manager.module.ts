@@ -18,22 +18,35 @@ import {
 import { EditRoomDialogComponent } from './components/edit-room-dialog/edit-room-dialog.component';
 import { FormsModule } from '@angular/forms';
 import { AddRoomButtonComponent } from './components/add-room-button/add-room-button.component';
+import { ImportComponent } from './components/import/import.component';
+import { SharedModule } from '../../shared/shared.module';
+
+const matImports = [
+    MatListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatInputModule,
+    MatOptionModule,
+    MatCheckboxModule,
+    MatButtonModule,
+];
 
 @NgModule({
-    declarations: [ManagerPageComponent, RoomListComponent, RoomComponent, EditRoomDialogComponent, AddRoomButtonComponent],
+    declarations: [
+        ManagerPageComponent,
+        RoomListComponent,
+        RoomComponent,
+        EditRoomDialogComponent,
+        AddRoomButtonComponent,
+        ImportComponent],
     imports: [
         CommonModule,
-        ManagerRoutingModule,
-        MatListModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatDialogModule,
-        MatSelectModule,
-        MatInputModule,
-        MatOptionModule,
+        SharedModule,
         FormsModule,
-        MatCheckboxModule,
-        MatButtonModule
+        ManagerRoutingModule,
+        ...matImports,
     ],
     entryComponents: [
         EditRoomDialogComponent,

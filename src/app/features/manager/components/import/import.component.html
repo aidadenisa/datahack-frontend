@@ -1,0 +1,9 @@
+<h2 class="mt-5">Import from spreadsheet</h2>
+
+<mat-form-field class="col-12">
+    <input matInput
+           placeholder="Spreadsheet URL"
+           [(ngModel)]="url">
+</mat-form-field>
+
+<shared-submit-button text="Import" (click)="import()" [loading]="saving"></shared-submit-button>
