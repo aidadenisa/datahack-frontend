@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>{{entry.name}}</h1>
+<div mat-dialog-content>
+    <mat-list>
+        <mat-list-item>
+            <span>Name: </span>
+            <span class="pl-2 font-weight-bold">{{entry.name}} </span>
+        </mat-list-item>
+        <mat-list-item>
+            <span>Capacity: </span>
+            <span class="pl-2 font-weight-bold">{{entry.capacity}} </span>
+        </mat-list-item>
+        <mat-list-item>
+            <span>Seats: </span>
+            <span class="pl-2 font-weight-bold">{{entry.numberOfSeats}} </span>
+        </mat-list-item>
+        <mat-list-item>
+            <span>Location: </span>
+            <span class="pl-2 font-weight-bold">{{entry.location.name}} </span>
+        </mat-list-item>
+        <mat-list-item>
+            <span>Organization: </span>
+            <span class="pl-2 font-weight-bold">{{entry.location.organization.name}} </span>
+        </mat-list-item>
+        <mat-list-item>
+            <span>Has sound system: </span>
+            <span class="pl-2 font-weight-bold">{{entry.soundSystem ? 'yes' : 'no'}} </span>
+        </mat-list-item>
+    </mat-list>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-end">
+    <button mat-raised-button (click)="dialogRef.close()">Close</button>
+</div>
