@@ -31,6 +31,7 @@ export class EditRoomDialogComponent implements OnInit {
   }
 
   public async ngOnInit() {
+    this.data = this.data ? this.data : {};
     this.locations = await this.locationService.getAll().toPromise();
   }
 
