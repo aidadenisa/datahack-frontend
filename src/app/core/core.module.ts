@@ -3,13 +3,26 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { CoreRoutingModule } from './core-routing.module';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { MatIconModule } from '@angular/material';
+
+const matImports = [
+    MatIconModule,
+];
 
 @NgModule({
-    declarations: [HomePageComponent],
+    declarations: [
+        HomePageComponent,
+        SideMenuComponent,
+    ],
     imports: [
         CommonModule,
         SharedModule,
         CoreRoutingModule,
+        ...matImports,
+    ],
+    exports: [
+        SideMenuComponent,
     ],
 })
 export class CoreModule {

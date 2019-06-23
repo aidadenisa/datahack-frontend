@@ -1,0 +1,20 @@
+a {
+    color: #00092d;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    width: 100%;
+    grid-template-rows: minmax(4vh, 15vh) 1fr;
+}
+
+.white-menu {
+    width: 100vw;
+    height: 85px;
+
+    background: white;
+    opacity: 0.9;
+
+    z-index: 1;
+}

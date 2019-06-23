@@ -1,0 +1,21 @@
+<div #sidemenu [class.collapsed]="isCollapsed" class="side-menu">
+    <div class="collapse-button-wrapper d-lg-none">
+        <div (click)="toggleCollapse()">
+            <mat-icon class="size-2" svgIcon="menu"></mat-icon>
+        </div>
+    </div>
+    <div>
+        <div class="pl-4 pr-5 mr-5 mb-5" style="color:white;">
+            LOGO HERE
+        </div>
+        <div *ngFor="let item of menuItems">
+            <a class="nav-link"
+               (click)="item.action && item.action.call(); doCollapse();"
+               [routerLink]="item.routerLink"
+               [routerLinkActive]="[item.activated]"
+               [routerLinkActiveOptions]="{exact: item.routerLinkExact}">
+                {{item.title}}
+            </a>
+        </div>
+    </div>
+</div>
