@@ -6,7 +6,6 @@ import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angul
 })
 export class RoleGuard implements CanActivate {
     public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-        console.log('activate role guard');
         return true;
     }
     // constructor(private authService: AuthService,
