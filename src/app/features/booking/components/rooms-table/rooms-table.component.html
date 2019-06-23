@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="entries" class="mat-elevation-z5 full-width">
+<table mat-table [dataSource]="dataSource" matSort  class="mat-elevation-z5 full-width">
 
 
     <!-- Index Column -->
@@ -9,38 +9,38 @@
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
         <td mat-cell *matCellDef="let entry"> {{entry.name}} </td>
     </ng-container>
 
     <!-- Location Column -->
     <ng-container matColumnDef="location">
-        <th mat-header-cell *matHeaderCellDef> Location</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Location</th>
         <td mat-cell *matCellDef="let entry"> {{entry.location && entry.location.name}} </td>
     </ng-container>
 
     <!-- Size Column -->
     <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef> Size</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Size</th>
         <td mat-cell *matCellDef="let entry"> {{entry.size}} </td>
     </ng-container>
 
     <!-- Capacity Column -->
     <ng-container matColumnDef="capacity">
-        <th mat-header-cell *matHeaderCellDef> Capacity</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Capacity</th>
         <td mat-cell *matCellDef="let entry"> {{entry.capacity}} </td>
     </ng-container>
 
     <!-- soundSystem Column -->
     <ng-container matColumnDef="soundSystem">
-        <th mat-header-cell *matHeaderCellDef> Sound system</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Has sound system</th>
         <td mat-cell *matCellDef="let entry"> {{entry.soundSystem ? 'yes' : 'no'}} </td>
     </ng-container>
 
     <!-- seats Column -->
-    <ng-container matColumnDef="numberOfSeats">
-        <th mat-header-cell *matHeaderCellDef>Seats</th>
-        <td mat-cell *matCellDef="let entry"> {{entry.numberOfSeats}} </td>
+    <ng-container matColumnDef="seats">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Has Seats</th>
+        <td mat-cell *matCellDef="let entry"> {{entry.seats ? 'yes' : 'no'}} </td>
     </ng-container>
 
 
@@ -57,3 +57,7 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<div class="pt-3">
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

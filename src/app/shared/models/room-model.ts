@@ -7,5 +7,5 @@ export interface RoomModel extends Entity {
     capacity?: number;
     area?: number;
     soundSystem?: boolean;
-    numberOfSeats?: number;
+    seats?: boolean;
 }

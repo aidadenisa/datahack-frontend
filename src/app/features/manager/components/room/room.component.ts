@@ -32,7 +32,7 @@ export class RoomComponent implements OnInit {
                 capacity: this.room.capacity ? this.room.capacity : 0,
                 area: this.room.area ? this.room.area : 0,
                 soundSystem: this.room.soundSystem ? this.room.soundSystem : false,
-                seats: this.room.numberOfSeats ? this.room.numberOfSeats : false,
+                seats: this.room.seats ? this.room.seats : false,
             },
         });
 
